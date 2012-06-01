@@ -1,0 +1,32 @@
+<%= form_for(@maestro) do |f| %>
+  <% if @maestro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@maestro.errors.count, "error") %> prohibited this maestro from being saved:</h2>
+
+      <ul>
+      <% @maestro.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :cargo_id %><br />
+    <%= f.collection_select :cargo_id, @cargos, :id, :descripcion %>
+  </div>
+  <div class="field">
+   <ul>
+    <% @materias.each do |materia|%>
+      <li> <%= f.check_box :materia_ids, {}, "#{materia.id}", ""  -%> <%= materia.descripcion%></li>
+    <% end %>
+   </ul>
+ </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

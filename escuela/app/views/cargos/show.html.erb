@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @cargo.descripcion %>
+</p>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+  </tr>
+
+<% @maestros.each do |maestro| %>
+  <tr>
+    <td><%= maestro.nombre %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Edit', edit_cargo_path(@cargo) %> |
+<%= link_to 'Back', cargos_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  maestra_id: 1
+  materia_id: 1
+  curso_id: 1
+
+two:
+  maestra_id: 1
+  materia_id: 1
+  curso_id: 1
