@@ -13,14 +13,19 @@ body
 	width: 925px;
 	margin: 0 auto;
 	height: auto;
-	padding-top: 36px;
+	padding-top: 10px;
 }
-
+#login{
+	width: 800px;
+	margin: 0 auto 15px auto;
+	text-align: right;
+}
 #head
 {
+	float: left;
 	width: 800px;
-	margin: 0 auto;
-	height: auto;
+	margin: 0 0 0 60px;
+	height: 90px;
 	border-top: 1px dotted #525252;
 	border-bottom: 1px dotted #525252;
 
@@ -28,15 +33,12 @@ body
 
 #head .logo
 {
-	height: 0;
-	width: 0;
-	padding-left: 383px;
-	padding-top: 39px;
-	background: url('logo.png');
-	overflow: hidden;
+	height: 80px;
+	width: 350px;
 	display: block;
 	margin: 20px 0px;
 	float: left;
+	color: #993333;
 }
 
 #head .nav
@@ -64,8 +66,9 @@ body
 #content
 {
 	width: 800px;
-	margin: 25px auto;
+	margin: 0 0 0 60px;
 	height: auto;
+	float: left;
 }
 
 
