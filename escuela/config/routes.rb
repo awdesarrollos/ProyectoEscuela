@@ -1,7 +1,11 @@
 Escuela::Application.routes.draw do
   resources :materias
 
-  resources :alumnos
+  resources :alumnos do
+   collection do
+     post 'resultado'
+   end
+  end
 
   resources :maestros
 

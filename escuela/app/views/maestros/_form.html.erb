@@ -22,7 +22,9 @@
   <div class="field">
    <ul>
     <% @materias.each do |materia|%>
-      <li> <%= f.check_box :materia_ids, {}, "#{materia.id}", ""  -%> <%= materia.descripcion%></li>
+      <li> <%= check_box_tag "maestro[materia_ids][]", materia.id, @maestro.materias.include?(materia) %>  
+     <%= materia.descripcion %>
+      </li>
     <% end %>
    </ul>
  </div>

@@ -1,24 +1,10 @@
 <h1>Listing maestros</h1>
 
-<table>
-  <tr>
-    <th>Nombre</th>
-    <th>Cargo</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= render 'formulario_busqueda' %>
 
-<% @maestros.each do |maestro| %>
-  <tr>
-    <td><%= maestro.nombre %></td>
-    <td><%= maestro.cargo_descripcion %></td>
-    <td><%= link_to 'Show', maestro %></td>
-    <td><%= link_to 'Edit', edit_maestro_path(maestro) %></td>
-    <td><%= link_to 'Destroy', maestro, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id = 'listado_maestros'>
+	<%= render 'listado' %>
+</div>
 
 <br />
 

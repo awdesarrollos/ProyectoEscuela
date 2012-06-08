@@ -1,24 +1,10 @@
-<h1>Listing alumnos</h1>
+<h1>Listado de Alumnos</h1>
 
-<table>
-  <tr>
-    <th>Nombre</th>
-    <th>Curso</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= render 'formulario_busqueda' %>
 
-<% @alumnos.each do |alumno| %>
-  <tr>
-    <td><%= alumno.nombre %></td>
-    <td><%= alumno.curso_descripcion %></td>
-    <td><%= link_to 'Show', alumno %></td>
-    <td><%= link_to 'Edit', edit_alumno_path(alumno) %></td>
-    <td><%= link_to 'Destroy', alumno, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id = 'listado_alumnos'>
+	<%= render 'listado' %>
+</div>
 
 <br />
 

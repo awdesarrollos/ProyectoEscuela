@@ -1,0 +1,7 @@
+<%= form_for @alumno, url: resultado_alumnos_path, remote: true do  %>
+
+	<br/>
+	<%= text_field_tag :nombre %>
+	<%= submit_tag 'Buscar' %>
+
+<%  end %>

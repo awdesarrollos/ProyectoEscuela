@@ -3,6 +3,7 @@ class MaestrosController < ApplicationController
   # GET /maestros.json
   def index
     @maestros = Maestro.all
+    @maestro = Maestro.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -38,6 +39,7 @@ class MaestrosController < ApplicationController
   def edit
     @maestro = Maestro.find(params[:id])
     @cargos = Cargo.all
+    @materias = Materia.all
   end
 
   # POST /maestros
@@ -82,5 +84,9 @@ class MaestrosController < ApplicationController
       format.html { redirect_to maestros_url }
       format.json { head :no_content }
     end
+  end
+
+  def resultado
+  	@maestros = Maestro.where('nombre like ?', "%#{params[:nombre]}%")
   end
 end

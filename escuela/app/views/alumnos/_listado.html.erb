@@ -1,0 +1,20 @@
+	<br/>
+	<table>
+	  <tr>
+	    <th>Nombre</th>
+	    <th>Curso</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr>
+
+	<% @alumnos.each do |alumno| %>
+	  <tr>
+	    <td><%= alumno.nombre %></td>
+	    <td><%= alumno.curso_descripcion %></td>
+	    <td><%= link_to 'Show', alumno %></td>
+	    <td><%= link_to 'Edit', edit_alumno_path(alumno) %></td>
+	    <td><%= link_to 'Destroy', alumno, confirm: 'Are you sure?', method: :delete %></td>
+	  </tr>
+	<% end %>
+	</table>

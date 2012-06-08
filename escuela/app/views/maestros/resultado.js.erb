@@ -1,0 +1,7 @@
+<% unless @maestros.blank? %>
+	contenido = "<%= escape_javascript(render 'listado') %>"
+<% else %>
+ 	contenido = "<h3>No se encontraron maestros</h3><a href='alumnos'>Volver al listado</a>"
+<% end %>
+
+$("#listado_maestros").html(contenido);

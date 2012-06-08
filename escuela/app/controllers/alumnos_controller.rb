@@ -3,6 +3,7 @@ class AlumnosController < ApplicationController
   # GET /alumnos.json
   def index
     @alumnos = Alumno.all
+	@alumno = Alumno.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -82,5 +83,9 @@ class AlumnosController < ApplicationController
       format.html { redirect_to alumnos_url }
       format.json { head :no_content }
     end
+  end
+
+  def resultado
+  	@alumnos = Alumno.where('nombre like ?', "%#{params[:nombre]}%")
   end
 end
