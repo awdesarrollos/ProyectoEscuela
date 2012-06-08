@@ -1,0 +1,316 @@
+body
+{
+	background: url('backgroundtile.png') fixed top;
+}
+
+.margin
+{
+	margin-bottom: 10px;
+}
+
+#container
+{
+	width: 925px;
+	margin: 0 auto;
+	height: auto;
+	padding-top: 36px;
+}
+
+#head
+{
+	width: 800px;
+	margin: 0 auto;
+	height: auto;
+	border-top: 1px dotted #525252;
+	border-bottom: 1px dotted #525252;
+
+}
+
+#head .logo
+{
+	height: 0;
+	width: 0;
+	padding-left: 383px;
+	padding-top: 39px;
+	background: url('logo.png');
+	overflow: hidden;
+	display: block;
+	margin: 20px 0px;
+	float: left;
+}
+
+#head .nav
+{
+	color: #454444;
+	font-family: arial;
+	font-size: 14px;
+	font-weight: bold;
+	float: right;
+	margin-top: 33px;
+}
+
+#head .nav a
+{
+	color: #454444;
+	text-decoration: none;
+	margin-left: 25px;
+}
+
+#head .nav a:hover
+{
+	background: #fffc00;
+}
+
+#content
+{
+	width: 800px;
+	margin: 25px auto;
+	height: auto;
+}
+
+
+#content p
+{
+	font-family: arial;
+	font-size: 16px;
+	color: #424242;
+	line-height: 25px;
+	margin-bottom: 20px;
+
+}
+
+#content .intro
+{
+	padding: 10px 0px;
+}
+
+#content .intro p
+{
+	color: #424242;
+	font-family: arial;
+	font-size: 13px;
+	line-height: 19px;
+	background: #eee;
+	padding: 5px;
+}
+
+#content .intro p a
+{
+	color: #454444;
+	text-decoration: none;
+
+	font-weight: bold;
+}
+
+#content .intro p a:hover
+{
+	text-decoration: underline;
+}
+
+#content .welcomebubble
+{
+	height: 0;
+	width: 0;
+	padding-left: 465px;
+	padding-top: 66px;
+	background: url('welcomebubble.png');
+	overflow: hidden;
+	display: block;
+}
+
+#content .welcome
+{
+	width: 800px;
+	border-bottom: 1px dotted #525252;
+	padding: 0px 0px 20px 0px;
+}
+
+#content .welcome p a
+{
+	background: #e2e2e2;
+	color: #424242;
+	text-decoration: none;
+}
+
+#content .welcome p a:hover
+{
+	text-decoration: underline;
+}
+
+#content .services
+{
+	width: 800px;
+	border-bottom: 1px dotted #525252;
+	padding: 0px 0px 20px 0px;
+	margin: 50px 0px 0px 0px;
+}
+
+#content .services p a
+{
+	background: #e2e2e2;
+	color: #424242;
+	text-decoration: none;
+}
+
+#content .services p a:hover
+{
+	text-decoration: underline;
+}
+
+.graphimg
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .work
+{
+	width: 800px;
+	border-bottom: 1px dotted #525252;
+	padding: 0px 0px 20px 0px;
+	margin: 50px 0px 0px 0px;
+}
+
+#content .work p a
+{
+	background: #e2e2e2;
+	color: #424242;
+	text-decoration: none;
+}
+
+#content .work p a:hover
+{
+	text-decoration: underline;
+}
+
+#content .contact
+{
+	width: 800px;
+	border-bottom: 1px dotted #525252;
+	padding: 0px 0px 20px 0px;
+	margin: 50px 0px 0px 0px;
+	height: auto;
+}
+
+#content .contact p a
+{
+	background: #e2e2e2;
+	color: #424242;
+	text-decoration: none;
+}
+
+#content .contact p a:hover
+{
+	text-decoration: underline;
+}
+
+#content .contact .inputbox
+{
+	background: url('inputbg.png') no-repeat;
+	padding: 16px 0px 16px 15px;
+	width: 459px;
+	font-family: arial;
+	font-size: 16px;
+	font-weight: bold;
+	border: 0;
+	outline: none;
+	color: #424242;
+	margin-bottom: 5px;
+}
+
+#content .contact .inputbox:focus
+{
+	color: #000000;
+}
+
+#content .contact label
+{	
+	padding: 10px 0px 10px 0px;
+	width: 459px;
+	color: #424242;
+	font-family: arial;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#content .contact span
+{	
+	display: block;
+	padding: 10px 0px 10px 0px;
+	width: 459px;
+	color: #424242;
+	font-family: arial;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#content .contact .error
+{
+	font-family: arial;
+	font-size: 12px;
+	color: red;
+	font-weight: normal;
+	display: none;
+}
+
+#content .contact .error a
+{
+	text-decoration: none;
+	color: #424242;
+	background: #e2e2e2;
+}
+
+#content .contact .error a:hover
+{
+	text-decoration: underline;
+}
+
+
+#content .contact .textareabox
+{
+	background: url('textareabg.png') no-repeat;
+	padding: 16px 10px 10px 15px;
+	width: 439px;
+	height: 200px;
+	font-family: arial;
+	font-size: 16px;
+	font-weight: bold;
+	border: 0;
+	outline: none;
+	color: #424242;
+	clear: both;
+	resize: none;
+}
+
+#content .contact .textareabox:focus
+{
+	color: #000000;
+}
+
+#content .contact .robot
+{
+	color: #424242;
+	font-family: arial;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0;
+	margin-top: 15px;
+}
+
+#content .contact .robot .robotinput
+{
+	color: #424242;
+	font-family: arial;
+	font-size: 16px;
+	font-weight: bold;
+	background: url('numberinput.png') no-repeat;
+	width: 54px;
+	height: 49px;
+	outline: none;
+	border: none;
+	margin-left: 10px;
+	padding: 1px 22px;
+}
+
+

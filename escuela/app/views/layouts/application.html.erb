@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Escuela</title>
+  <title>Escuela - Sistema de Administracion</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="container">
+    <div id="head">
+      <h1>Proyecto Escuela</h1>
+      <% if usuario_signed_in? %>      
+        <div class="nav">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Work</a>
+          <a href="#get-in-touch">Contact</a>
+          <a href="#">Blog</a>
+        </div>
+        <% end %>  
+      <div class="clear"></div>
+    </div>
+    <!-- End Head -->
+    
+    <div id="content">
+    
+    <div id="user_nav">  
+    <% if usuario_signed_in? %>  
+      Signed in as <%= current_usuario.email %>. Not you?  
+      <%= link_to "Sign out", destroy_usuario_session_path, method: :delete, confirm: "Are you sure?" %>  
+    <% else %>  
+      <%= link_to "Sign up", new_usuario_registration_path %> or  
+      <%= link_to "Sign in", new_usuario_session_path %>  
+    <% end %>  
+  </div>  
 
-<div id="user_nav">  
-  <% if usuario_signed_in? %>  
-    Signed in as <%= current_usuario.email %>. Not you?  
-    <%= link_to "Sign out", destroy_usuario_session_path, method: :delete, confirm: "Are you sure?" %>  
-  <% else %>  
-    <%= link_to "Sign up", new_usuario_registration_path %> or  
-    <%= link_to "Sign in", new_usuario_session_path %>  
-  <% end %>  
-</div>  
+  <%= yield %>
+    
+    
+    </div>
+  </div>
 
-	<%= yield %>
+
+  
+
+	
 
 </body>
 </html>
