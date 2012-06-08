@@ -9,12 +9,12 @@
 <body>
 <div id="container">
     <div id="login">
-      <% if usuario_signed_in? %>  
-      <%= current_usuario.email %> |  
-      <%= link_to "Sign out", destroy_usuario_session_path, method: :delete, confirm: "Are you sure?" %>  
+      <% if usuario_signed_in? %> 
+      <%= current_usuario.email %> | 
+      <%= link_to "Salir", destroy_usuario_session_path, method: :delete, confirm: "Una pena que nos deje, está seguro?" %> 
       <% else %>  
         <%= link_to "Registro", new_usuario_registration_path %> |  
-        <%= link_to "Login", new_usuario_session_path %>  
+        <%= link_to "Entrar", new_usuario_session_path %>  
       <% end %>  
     </div>
     <div id="head">
@@ -23,11 +23,10 @@
       </div>
       <% if usuario_signed_in? %>      
         <div class="nav">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#portfolio">Work</a>
-          <a href="#get-in-touch">Contact</a>
-          <a href="#">Blog</a>
+          <%= link_to "Maestros", maestros_path %>
+          <%= link_to "Alumnos", alumnos_path %>
+          <%= link_to "Materias", materias_path %>
+          <%= link_to "Cursos", cursos_path %>
         </div>
         <% end %>  
       <div class="clear"></div>
