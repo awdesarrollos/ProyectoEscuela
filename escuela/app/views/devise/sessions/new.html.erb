@@ -1,5 +1,5 @@
 <h2>Login</h2>
-
+<br/>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div><%= f.label :email %>
   <%= f.email_field :email %></div>
@@ -11,7 +11,9 @@
     <div><%= f.check_box :remember_me %> Recordarme</div>
   <% end -%>
   <br/>
-  <div><%= f.submit "Login" %></div>
+  <div><%= f.submit "Login", :class => "btn btn-primary" %></div>
 <% end %>
 
-<%= render :partial => "devise/shared/links" %>
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
+  <%= link_to "Olvido su password?", new_password_path(resource_name) %>
+<% end -%>
