@@ -8,7 +8,17 @@
 </head>
 <body>
 
-          <%= yield %>
+<div id="user_nav">  
+  <% if usuario_signed_in? %>  
+    Signed in as <%= current_usuario.email %>. Not you?  
+    <%= link_to "Sign out", destroy_usuario_session_path, method: :delete, confirm: "Are you sure?" %>  
+  <% else %>  
+    <%= link_to "Sign up", new_usuario_registration_path %> or  
+    <%= link_to "Sign in", new_usuario_session_path %>  
+  <% end %>  
+</div>  
+
+	<%= yield %>
 
 </body>
 </html>

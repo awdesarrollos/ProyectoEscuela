@@ -7,6 +7,7 @@ ActiveSupport::Inflector.inflections do |inflect|
 #   inflect.singular /^(ox)en/i, '\1'
 	inflect.irregular 'maestro_materia_curso', 'maestros_materias_cursos'
 	inflect.irregular 'materia', 'materias'
+	inflect.irregular 'ciudad', 'ciudades'
 #   inflect.uncountable %w( fish sheep )
 end
 #
