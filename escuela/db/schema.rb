@@ -55,12 +55,6 @@ ActiveRecord::Schema.define(:version => 20120608165531) do
     t.integer  "maestro_id"
   end
 
-  create_table "materia", :force => true do |t|
-    t.string   "descripcion"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "materias", :force => true do |t|
     t.string   "descripcion"
     t.datetime "created_at",  :null => false
