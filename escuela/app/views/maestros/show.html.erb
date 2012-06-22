@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+	<%imagen = @maestro.image_path || 'no_user.png'%>
+	<%= image_tag "avatar/#{imagen}"%>
+</p>
+<p>
   <b>Nombre:</b>
   <%= @maestro.nombre %>
 </p>
